@@ -46,10 +46,9 @@ services:
       - "8888:8888"
       - "8889:8889"
     volumes:
-      - /root/tugraph/data:/var/lib/lgraph/data
-      - /root/tugraph/log:/var/log/lgraph_log
-    command: bash /setup.sh
-    # command: lgraph_server
+      - /home/duomiagi/tugraph/data:/var/lib/lgraph/data
+      - /home/duomiagi/tugraph/log:/var/log/lgraph_log
+    command: lgraph_server
 
   elasticsearch:
     image: elasticsearch:8.5.3
